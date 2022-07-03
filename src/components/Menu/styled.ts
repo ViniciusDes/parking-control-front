@@ -1,4 +1,3 @@
-import { Props } from "next/script";
 import styled from "styled-components";
 
 interface ContainerMenuProps {

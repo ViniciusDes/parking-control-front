@@ -41,6 +41,9 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
+    border: 0;
+    background: none;
+    
   }
 
   #clear_input {
@@ -148,4 +151,21 @@ form label {
  
 
  
+`;
+
+interface BoxComponentProps {
+  wd: string;
+  jContent?: string;
+  algItems?: string;
+  flDirection?: string;
+  pd?: string;
+}
+export const BoxComponent = styled.div<BoxComponentProps>`
+  display: flex;
+  justify-content: ${(props) => (props.jContent ? props.jContent : "initial")};
+  align-items: ${(props) => (props.algItems ? props.algItems : "initial")};
+  flex-direction: ${(props) =>
+    props.flDirection ? props.flDirection : "column"};
+  width: ${(props) => (props.wd ? props.wd : "100%")};
+  padding: ${(props) => (props.pd ? props.pd : "5px")};
 `;
