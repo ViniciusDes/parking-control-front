@@ -1,3 +1,5 @@
+import TopBar from "../../components/TopBar";
+
 export default function Menu(): JSX.Element {
-  return <h1>Menu</h1>;
+  return <TopBar />;
 }
